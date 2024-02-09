@@ -1,0 +1,12 @@
+---
+- name: Update apt cache (Debian).
+  apt: update_cache=true cache_valid_time=86400
+
+- name: Install basic packages
+  apt:
+    name: "{{ basic_packages }}"
+    state: present
+
+- name: All packages installed.
+  debug:
+    msg: Packages have been successfully installed

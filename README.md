@@ -1,1 +1,3 @@
-# ansible-role-system
+# Basic Linux setup
+
+supported os families: RedHat, Debian

@@ -1,0 +1,11 @@
+---
+# tasks file for ruby
+
+- name: Install basic packages
+  dnf:
+    name: "{{ basic_packages }}"
+    state: present
+
+- name: All packages installed.
+  debug:
+    msg: Packages have been successfully installed

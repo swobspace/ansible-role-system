@@ -1,0 +1,18 @@
+---
+basic_packages:
+  - screen
+  - bzip2
+  - curl
+  - vim
+  - vim-common
+  - wget
+  - etckeeper
+  - p7zip
+  - postfix
+  - mutt
+  - mailx
+  - tree
+  - ethtool
+  - mtr
+  - net-tools
+  - symlinks
