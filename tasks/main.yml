@@ -7,6 +7,7 @@
     regexp: "^{{ admin.name }}"
     line: "{{ admin.name }} ALL=(ALL) NOPASSWD: ALL"
     validate: "visudo -cf %s"
+  when: sudo_no_passwd
 
 - name: import ssh tasks
   import_tasks: ssh.yml
