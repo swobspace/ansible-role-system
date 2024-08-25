@@ -6,6 +6,12 @@
     name: "{{ basic_packages }}"
     state: present
 
+- name: install additional packages
+  dnf:
+    name: "{{ additional_packages }}"
+    state: present
+  when: additional_packages is defined
+
 - name: All packages installed.
   debug:
     msg: Packages have been successfully installed

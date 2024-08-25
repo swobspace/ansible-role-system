@@ -11,6 +11,7 @@
 
 - name: import ssh tasks
   import_tasks: ssh.yml
+  when: ansible_connection != "local"
 
 - name: include OS-specific vars
   include_vars: "{{ ansible_os_family }}.yml"
