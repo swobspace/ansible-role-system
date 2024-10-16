@@ -13,6 +13,12 @@
     state: present
   when: additional_packages is defined
 
+- name: remove packages
+  apt:
+    name: "{{ remove_packages }}"
+    state: absent
+  when: remove_packages is defined
+
 - name: All packages installed.
   debug:
     msg: Packages have been successfully installed
